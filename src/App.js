@@ -1,8 +1,8 @@
 //import logo from './logo.svg';
-import './App.css';
 import {BrowserRouter,Route,Routes} from 'react-router-dom';
 import Dashboard from './pages/Home';
 import Header from './component';
+import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 
 function App() {
