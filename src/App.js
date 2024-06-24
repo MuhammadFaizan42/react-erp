@@ -1,7 +1,7 @@
 //import logo from './logo.svg';
 import {BrowserRouter,Route,Routes} from 'react-router-dom';
 import Dashboard from './pages/Home';
-import Header from './component';
+import Header from './component/Header';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 

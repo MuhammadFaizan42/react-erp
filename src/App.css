@@ -6,4 +6,11 @@ header .row{margin:0px !important;}
 header .logo{text-decoration: none !important;}
 header .logo img{width:45px !important;}
 header .logo span{color:black !important;font-weight:800 !important;font-size: 24px !important;}
-header button.rounded-circle{ min-width:40px !important;width:40px !important;height: 40px !important;background: #f0f5ff !important;color:#292929 !important;}
+header button.rounded-circle{ min-width:40px !important;width:40px !important;height: 40px !important;background: #f0f5ff !important;color:#292929 !important;gap:2px;}
+header button.rounded-circle svg{color:#292929;font-size: 18px !important;}
+.searchBox{width: 350px;height:40px;background: #f0f5ff;border-radius: 6px;padding: 3px 15px;}
+.searchBox input{background:transparent;border:0px;outline: none; padding-left: 0px; font-size: 14px;color: #292929;}
+.searchBox input::-webkit-input-placeholder{color:rgb(0,0,0,0.6);}
+.searchBox svg{font-size:18px;color: #292929;}
+.myAcc .userImg .rounded-circle{display:flex; align-items: center;justify-content: center; overflow: hidden;cursor: pointer; position: relative;width:40px; height: 40px;}
+.myAcc .userImg .rounded-circle img{object-fit:cover;width: 100%;}
