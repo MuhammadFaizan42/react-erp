@@ -32,9 +32,9 @@ padding-bottom: 40px;}
 .main .sidebarWrapper .sidebar::-webkit-scrollbar-thumb{background: transparent !important;}
 .main .sidebarWrapper:hover .sidebar::-webkit-scrollbar{background:#0858f7 !important;}
 
-.main .sidebarWrapper .sidebar ul{margin-bottom: opx;padding:10px 15px !important;}
+.main .sidebarWrapper .sidebar ul{margin-bottom:0px;padding:10px 15px !important;}
 .main .sidebarWrapper .sidebar ul li{list-style: none;}
-.main .sidebarWrapper .sidebar ul li button{color:rgb(0,0,0,0.7) !important;text-align: left;justify-content: left;
+.main .sidebarWrapper .sidebar ul li button{color:#5e5d72 !important;text-align: left;justify-content: left;
 border-radius: 10px !important;padding: 12px 10px !important;align-items: center;text-transform: capitalize !important;
 font-weight: 600 !important;font-family: "Open Sans", sans-serif !important;}
 
@@ -42,7 +42,17 @@ font-weight: 600 !important;font-family: "Open Sans", sans-serif !important;}
 .main .sidebarWrapper .sidebar ul li button .icon{display: flex;align-items: center;
 justify-content: center;width: 25px;height: 25px;margin-right: 10px;}
 .main .sidebarWrapper .sidebar ul li button .icon svg{font-size: 22px;}
-.main .sidebarWrapper .sidebar ul li button *{color:rgb(0,0,0,0.7) !important;opacity: 0.7;}
+.main .sidebarWrapper .sidebar ul li button *{color: #5e5d72 !important;opacity: 0.7;}
 .main .sidebarWrapper .sidebar ul li button .arrow{margin-left: auto;
 display: flex;align-items: center;justify-content: center;width: 25px;height: 25px;}
 .main .sidebarWrapper .sidebar ul li button:hover{background: #f1f1f1 !important;}
+.main .sidebarWrapper .sidebar ul li button .act{background: #f1f1f1 !important;}
+/* Submenu  */
+
+.main .sidebarWrapper .sidebar ul .submenu{padding: 0px 45px !important;position: relative;}
+.main .sidebarWrapper .sidebar ul .submenu::before{content: '';width: 1px; height:190px;
+position: absolute;top:0px; left: 25px;background:rgba(0,0,0,0.2);}
+.main .sidebarWrapper .sidebar ul .submenu li{width: 100%;list-style: none;}
+.main .sidebarWrapper .sidebar ul .submenu li a{color:#5e5d72 !important;text-decoration: none;
+display: block;padding: 6px 0px;font-size: 14px;font-weight: 500;transition: all 0.3s;}
+.main .sidebarWrapper .sidebar ul .submenu li a:hover{color:#0858f7 !important;}
