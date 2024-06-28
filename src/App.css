@@ -46,8 +46,8 @@ justify-content: center;width: 25px;height: 25px;margin-right: 10px;}
 .main .sidebarWrapper .sidebar ul li button .arrow{margin-left: auto;
 display: flex;align-items: center;justify-content: center;width: 25px;height: 25px; transition: all 0.3s ease-in-out;}
 .main .sidebarWrapper .sidebar ul li button:hover{background: #f1f1f1 !important;}
-.main .sidebarWrapper .sidebar ul li button .active{background: #f1f1f1 !important;}
-.main .sidebarWrapper .sidebar ul li button .active.arrow{transform: rotate(90deg);}
+.main .sidebarWrapper .sidebar ul li button.active{background: #f1f1f1 !important;}
+.main .sidebarWrapper .sidebar ul li button.active .arrow{transform: rotate(90deg);}
 /* Submenu  */
 
 .main .sidebarWrapper .sidebar ul .submenu{padding: 0px 45px !important;position: relative;height:0px;}
