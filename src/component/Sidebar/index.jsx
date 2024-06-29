@@ -96,12 +96,9 @@ const Sidebar = () => {
                     </Button>
                     <div className={`submenuWrapper ${activeTab===4 && isToggleSubmenu===true ? 'colapse' : 'colapsed'}`}>
                             <ul className='submenu'>
-                                <li><Link to="#">Purchase Order</Link></li>
-                                <li><Link to="#">Goods Receiving Note</Link></li>
-                                <li><Link to="#">Cash Purchase Invoice</Link></li>
-                                <li><Link to="#">Purchase Invoice</Link></li>
-                                <li><Link to="#">Purchase Return</Link></li>
-                                <li><Link to="#">Store Issuance</Link></li>
+                                <li><Link to="#">Department</Link></li>
+                                <li><Link to="#">Designation</Link></li>
+                                <li><Link to="#">Sale Team</Link></li>
                             </ul>
                         </div>
 
@@ -115,12 +112,8 @@ const Sidebar = () => {
                     </Button>
                     <div className={`submenuWrapper ${activeTab===5 && isToggleSubmenu===true ? 'colapse' : 'colapsed'}`}>
                             <ul className='submenu'>
-                                <li><Link to="#">Purchase Order</Link></li>
-                                <li><Link to="#">Goods Receiving Note</Link></li>
-                                <li><Link to="#">Cash Purchase Invoice</Link></li>
-                                <li><Link to="#">Purchase Invoice</Link></li>
-                                <li><Link to="#">Purchase Return</Link></li>
-                                <li><Link to="#">Store Issuance</Link></li>
+                                <li><Link to="#">Inventory Item</Link></li>
+                                <li><Link to="#">Stock Transfer</Link></li>
                             </ul>
                         </div>
             </li>
@@ -133,12 +126,13 @@ const Sidebar = () => {
                         </Button>
                         <div className={`submenuWrapper ${activeTab===6 && isToggleSubmenu===true ? 'colapse' : 'colapsed'}`}>
                             <ul className='submenu'>
-                                <li><Link to="#">Purchase Order</Link></li>
-                                <li><Link to="#">Goods Receiving Note</Link></li>
-                                <li><Link to="#">Cash Purchase Invoice</Link></li>
-                                <li><Link to="#">Purchase Invoice</Link></li>
-                                <li><Link to="#">Purchase Return</Link></li>
-                                <li><Link to="#">Store Issuance</Link></li>
+                                <li><Link to="#">Sale Order</Link></li>
+                                <li><Link to="#">Delivery Order</Link></li>
+                                <li><Link to="#">Sale Invoice</Link></li>
+                                <li><Link to="#">Sale Tax Invoice</Link></li>
+                                <li><Link to="#">Sale Return</Link></li>
+                                <li><Link to="#">Raw Material Sale</Link></li>
+                                <li><Link to="#">Sale Invoice Transfer</Link></li>
                             </ul>
                         </div>
             </li>
@@ -169,12 +163,19 @@ const Sidebar = () => {
                     </Button>
                     <div className={`submenuWrapper ${activeTab===8 && isToggleSubmenu===true ? 'colapse' : 'colapsed'}`}>
                             <ul className='submenu'>
-                                <li><Link to="#">Purchase Order</Link></li>
-                                <li><Link to="#">Goods Receiving Note</Link></li>
-                                <li><Link to="#">Cash Purchase Invoice</Link></li>
-                                <li><Link to="#">Purchase Invoice</Link></li>
-                                <li><Link to="#">Purchase Return</Link></li>
-                                <li><Link to="#">Store Issuance</Link></li>
+                                <li><Link to="#">Exchange / Daily Rate</Link></li>
+                                <li><Link to="#">User Creation </Link></li>
+                                <li><Link to="#">Supplier</Link></li>
+                                <li><Link to="#">Customer</Link></li>
+                                <li><Link to="#">Stock Location</Link></li>
+                                <li><Link to="#">Product</Link></li>
+                                <li><Link to="#">Bank</Link></li>
+                                <li><Link to="#">Unit Of Measurement</Link></li>
+                                <li><Link to="#">Carriage/Transportation</Link></li>
+                                <li><Link to="#">Fiscal Year</Link></li>
+                                <li><Link to="#">Petty Cash Rights</Link></li>
+                                <li><Link to="#">Inovices Delation</Link></li>
+                                <li><Link to="#"></Link></li>
                             </ul>
                         </div>        
             </li>

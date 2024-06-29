@@ -51,7 +51,7 @@ display: flex;align-items: center;justify-content: center;width: 25px;height: 25
 /* Submenu  */
 
 .main .sidebarWrapper .sidebar ul .submenu{padding: 0px 45px !important;position: relative;height:0px;}
-.main .sidebarWrapper .sidebar ul .submenu::before{content: '';width: 1px; height:190px;
+.main .sidebarWrapper .sidebar ul .submenu::before{content: '';width: 1px; height:100%;
 position: absolute;top:0px; left: 25px;background:rgba(0,0,0,0.2);}
 .main .sidebarWrapper .sidebar ul .submenu li{width: 100%;list-style: none;}
 .main .sidebarWrapper .sidebar ul .submenu li a{color:#5e5d72 !important;text-decoration: none;
