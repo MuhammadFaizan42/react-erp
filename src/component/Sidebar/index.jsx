@@ -52,68 +52,131 @@ const Sidebar = () => {
                         </div>
             </li>
             <li>
-                <Link to="/">
-                    <Button className={`w-100 ${activeTab===2 ? 'active' : ''}`}>
+                
+                    <Button className={`w-100 ${activeTab===2 && isToggleSubmenu===true ? 'active' : ''}`} onClick={()=>isOpenSubmenu(2)}>
                         <span className='icon'><MdAddchart /></span>
                         Chart Of Accounts
                         <span className='arrow'><FaAngleRight /></span>
                     </Button>
-                </Link>   
+                    <div className={`submenuWrapper ${activeTab===2 && isToggleSubmenu===true ? 'colapse' : 'colapsed'}`}>
+                            <ul className='submenu'>
+                                <li><Link to="#">Master Accounts</Link></li>
+                                <li><Link to="#">Subsidiariy Accounts</Link></li>
+                                <li><Link to="#">Control Accounts</Link></li>
+                                <li><Link to="#">Detail Accounts</Link></li>
+                            </ul>
+                        </div>
+                
             </li>
             <li>
-                <Link to="/">
-                    <Button className={`w-100 ${activeTab===3 ? 'active' : ''}`}>
+                
+                    <Button className={`w-100 ${activeTab===3 && isToggleSubmenu===true ? 'active' : ''}`} onClick={()=>isOpenSubmenu(3)}>
                         <span className='icon'><MdOutlinePayments /></span>
                         Account Vouchers
                         <span className='arrow'><FaAngleRight /></span>
                     </Button>
-                </Link>
+                    <div className={`submenuWrapper ${activeTab===3 && isToggleSubmenu===true ? 'colapse' : 'colapsed'}`}>
+                            <ul className='submenu'>
+                                <li><Link to="#">Journal Vouchers</Link></li>
+                                <li><Link to="#">Bank Journal Vouchers</Link></li>
+                                <li><Link to="#">Cash Payment Vouchers</Link></li>
+                                <li><Link to="#">Bank Payment Vouchers</Link></li>
+                                <li><Link to="#">Cash Receipt Vouchers</Link></li>
+                                <li><Link to="#">Bank Receipt Vouchers</Link></li>
+                                <li><Link to="#">Petty Cash Book</Link></li>
+                            </ul>
+                        </div>
             </li>
             <li>
-                <Link to="/">
-                    <Button className={`w-100 ${activeTab===4 ? 'active' : ''}`}>
+               
+                    <Button className={`w-100 ${activeTab===4 && isToggleSubmenu===true ? 'active' : ''}`} onClick={()=>isOpenSubmenu(4)}>
                         <span className='icon'><GiHumanPyramid /></span>
                         Human Source
                         <span className='arrow'><FaAngleRight /></span>
                     </Button>
-                </Link>   
+                    <div className={`submenuWrapper ${activeTab===4 && isToggleSubmenu===true ? 'colapse' : 'colapsed'}`}>
+                            <ul className='submenu'>
+                                <li><Link to="#">Purchase Order</Link></li>
+                                <li><Link to="#">Goods Receiving Note</Link></li>
+                                <li><Link to="#">Cash Purchase Invoice</Link></li>
+                                <li><Link to="#">Purchase Invoice</Link></li>
+                                <li><Link to="#">Purchase Return</Link></li>
+                                <li><Link to="#">Store Issuance</Link></li>
+                            </ul>
+                        </div>
 
             </li>
             <li>
-                <Link to="/">
-                    <Button className={`w-100 ${activeTab===5 ? 'active' : ''}`}>
+                
+                    <Button className={`w-100 ${activeTab===5 && isToggleSubmenu===true ? 'active' : ''}`} onClick={()=>isOpenSubmenu(5)}>
                         <span className='icon'><MdOutlineInventory2 /></span>
                         Inventory
                         <span className='arrow'><FaAngleRight /></span>
                     </Button>
-                </Link> 
+                    <div className={`submenuWrapper ${activeTab===5 && isToggleSubmenu===true ? 'colapse' : 'colapsed'}`}>
+                            <ul className='submenu'>
+                                <li><Link to="#">Purchase Order</Link></li>
+                                <li><Link to="#">Goods Receiving Note</Link></li>
+                                <li><Link to="#">Cash Purchase Invoice</Link></li>
+                                <li><Link to="#">Purchase Invoice</Link></li>
+                                <li><Link to="#">Purchase Return</Link></li>
+                                <li><Link to="#">Store Issuance</Link></li>
+                            </ul>
+                        </div>
             </li>
             <li>
-                <Link to="/">
-                        <Button className={`w-100 ${activeTab===6 ? 'active' : ''}`}>
+                
+                        <Button className={`w-100 ${activeTab===6 && isToggleSubmenu===true ? 'active' : ''}`} onClick={()=>isOpenSubmenu(6)}>
                             <span className='icon'><AttachMoneyOutlinedIcon/></span>
                             Sale Order
                             <span className='arrow'><FaAngleRight /></span>
                         </Button>
-                </Link>       
+                        <div className={`submenuWrapper ${activeTab===6 && isToggleSubmenu===true ? 'colapse' : 'colapsed'}`}>
+                            <ul className='submenu'>
+                                <li><Link to="#">Purchase Order</Link></li>
+                                <li><Link to="#">Goods Receiving Note</Link></li>
+                                <li><Link to="#">Cash Purchase Invoice</Link></li>
+                                <li><Link to="#">Purchase Invoice</Link></li>
+                                <li><Link to="#">Purchase Return</Link></li>
+                                <li><Link to="#">Store Issuance</Link></li>
+                            </ul>
+                        </div>
             </li>
             <li>
-                <Link to="/">
-                    <Button className={`w-100 ${activeTab===7 ? 'active' : ''}`}>
+                
+                    <Button className={`w-100 ${activeTab===7 && isToggleSubmenu===true ? 'active' : ''}`} onClick={()=>isOpenSubmenu(7)}>
                         <span className='icon'><TbReportSearch /></span>
                         Reports
                         <span className='arrow'><FaAngleRight /></span>
                     </Button>
-                </Link>   
+                    <div className={`submenuWrapper ${activeTab===7 && isToggleSubmenu===true ? 'colapse' : 'colapsed'}`}>
+                            <ul className='submenu'>
+                                <li><Link to="#">Purchase Order</Link></li>
+                                <li><Link to="#">Goods Receiving Note</Link></li>
+                                <li><Link to="#">Cash Purchase Invoice</Link></li>
+                                <li><Link to="#">Purchase Invoice</Link></li>
+                                <li><Link to="#">Purchase Return</Link></li>
+                                <li><Link to="#">Store Issuance</Link></li>
+                            </ul>
+                        </div>
             </li>
             <li>
-                <Link to="/">
-                    <Button className={`w-100 ${activeTab===8 ? 'active' : ''}`}>
+                
+                    <Button className={`w-100 ${activeTab===8 && isToggleSubmenu===true ? 'active' : ''}`} onClick={()=>isOpenSubmenu(8)}>
                         <span className='icon'><IoSettingsOutline /></span>
                         Setting
                         <span className='arrow'><FaAngleRight /></span>
                     </Button>
-                </Link>                
+                    <div className={`submenuWrapper ${activeTab===8 && isToggleSubmenu===true ? 'colapse' : 'colapsed'}`}>
+                            <ul className='submenu'>
+                                <li><Link to="#">Purchase Order</Link></li>
+                                <li><Link to="#">Goods Receiving Note</Link></li>
+                                <li><Link to="#">Cash Purchase Invoice</Link></li>
+                                <li><Link to="#">Purchase Invoice</Link></li>
+                                <li><Link to="#">Purchase Return</Link></li>
+                                <li><Link to="#">Store Issuance</Link></li>
+                            </ul>
+                        </div>        
             </li>
         </ul>
     </div>
