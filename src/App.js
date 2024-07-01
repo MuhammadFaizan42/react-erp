@@ -1,6 +1,6 @@
 //import logo from './logo.svg';
 import {BrowserRouter,Route,Routes} from 'react-router-dom';
-import Dashboard from './pages/Home';
+import Dashboard from './pages/Dashboard/index.jsx';
 import Header from './component/Header/index.tsx';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css"
