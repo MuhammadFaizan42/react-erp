@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 *{margin:0px; padding:0px;}
-body{ font-family: "Open Sans", sans-serif !important;background:#ebe9e9!important;}
+body{ font-family: "Open Sans", sans-serif !important;background:#ebe9e9!important;overflow-x: hidden;}
 header{width: 100%;height:70px;background: white;position: fixed;top:0px;left: 0px;z-index: 1000;}
 header .row{margin:0px !important;}
 header .logo{text-decoration: none !important;}
@@ -24,10 +24,12 @@ header button.rounded-circle:hover svg{color:#0858f7 !important; }
 /* Side Bar */
 
 .main .sidebarWrapper{width:18%;flex:0 0 18%;transition: all 0.3s ease-in-out;}
+.main .sidebarWrapper.toggle{width:0%;flex:0 0 0%;}
 .main .sidebarWrapper .sidebar{width:18%;height:100vh;max-height:calc(100%-70px);
 position: fixed;top: 70px; left: 0px;background: #fff;overflow-y: scroll;overflow-x: hidden;
-padding-bottom: 40px;}
+padding-bottom: 40px;transition: all 0.3s ease-in-out;}
 
+.main .sidebarWrapper.toggle .sidebar{left:-100%;}
 .main .sidebarWrapper .sidebar::-webkit-scrollbar{width: 3px !important;}
 .main .sidebarWrapper .sidebar::-webkit-scrollbar-thumb{background: transparent !important;}
 .main .sidebarWrapper:hover .sidebar::-webkit-scrollbar{background:#0858f7 !important;}
@@ -67,8 +69,9 @@ display: block;padding: 6px 0px;font-size: 14px;font-weight: 500;transition: all
 .main .sidebarWrapper .sidebar ul .submenuWrapper.colapse .submenu{opacity: 1 !important;height:auto;}
 
 /* Dashboard */
-.main .content{width:80%;flex:0 0 80%}
-.right-content{padding: 90px 30px;}
+.main .content{width:80%;flex:0 0 80%; transition: all 0.3s ease-in-out;}
+.main .content.toggle{width:100%;flex:0 0 100%;}
+.right-content{padding: 90px 30px; padding-bottom: 10px;}
 .dashboardBoxWrapper{gap:20px;width: 100%; flex-wrap: wrap;}
 
 .dashboardBoxWrapper .dashboardBox{width:48%;height:170px;border-radius:10px;overflow: hidden;padding: 15px; display: flex;flex-direction: column;justify-content: space-around;}

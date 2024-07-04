@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useContext, useState} from 'react'
 import {Link} from 'react-router-dom'
 import Logo from '../../assets/images/Logo.png'
 import Button from '@mui/material/Button';
@@ -11,6 +11,7 @@ import { IoMdCart } from "react-icons/io";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaRegBell } from "react-icons/fa6";
 import AvatarImg from '../../assets/images/Avatar.png'
+import {MyContext} from '../../App';
 
 import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
@@ -35,6 +36,9 @@ const Header = () => {
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
       setAnchorEl(event.currentTarget);
     };
+
+    const context =useContext(MyContext);
+  
     const handleClose = () => {
       setAnchorEl(null);
     };
@@ -62,7 +66,14 @@ const Header = () => {
                 </div>
 
                 <div className='col-sm-3 d-flex align-items-center part2 pl-4'>
-                    <Button className='rounded-circle mr-3'><MdMenuOpen/></Button>
+                    <Button className='rounded-circle mr-3' onClick={()=>context.setIsToggleSidebar(!context.isToggleSidebar)}>
+                    {
+                      context.isToggleSidebar===false?<MdMenuOpen/>:
+                      <MdOutlineMenu/>
+
+                    }
+                    
+                    </Button>
                     <SearchBox/>  
                 </div>
                 <div className='col-sm-7 d-flex align-items-center justify-content-end part3 pl-4'>

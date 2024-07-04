@@ -1,5 +1,5 @@
 import { Button } from '@mui/material'
-import React, { useState } from 'react'
+import React, {useContext,useState } from 'react'
 import { RxDashboard } from "react-icons/rx";
 import { FaAngleRight } from "react-icons/fa6";
 import { BiPurchaseTagAlt } from "react-icons/bi";
@@ -11,12 +11,14 @@ import AttachMoneyOutlinedIcon from '@mui/icons-material/AttachMoneyOutlined';
 import { TbReportSearch } from "react-icons/tb";
 import { IoSettingsOutline } from "react-icons/io5";
 import { Link } from 'react-router-dom';
+import {MyContext} from '../../App';
 
 
 
 const Sidebar = () => {
     const [activeTab,setActiveTab]=useState(0);
     const [isToggleSubmenu,setIsToggleSubmenu]=useState(false);
+    const context =useContext(MyContext);
     const isOpenSubmenu=(index)=>{
         setActiveTab(index)
         setIsToggleSubmenu(!isToggleSubmenu)
