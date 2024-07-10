@@ -165,7 +165,7 @@ const Sidebar = () => {
                     </Button>
                     <div className={`submenuWrapper ${activeTab===8 && isToggleSubmenu===true ? 'colapse' : 'colapsed'}`}>
                             <ul className='submenu'>
-                                <li><Link to="#">Exchange / Daily Rate</Link></li>
+                                <li><Link to="/exchange">Exchange / Daily Rate</Link></li>
                                 <li><Link to="#">User Creation </Link></li>
                                 <li><Link to="#">Supplier</Link></li>
                                 <li><Link to="#">Customer</Link></li>

@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Sidebar from './component/Sidebar/index.jsx';
 import { createContext, useEffect, useState } from 'react';
 import Login from './pages/Login/index.jsx';
+import ExchangeRate from './pages/Settings/ExchangeRate.jsx';
 
 
 const MyContext=createContext();
@@ -40,12 +41,13 @@ function App() {
         <Sidebar/>
         </div>
       }
-           
+        
           <div className= {`content ${isHideSidebarAndHeader===true && 'full'} ${isToggleSidebar===true?'toggle' : ''}`}>
                 <Routes>
                     <Route path="/" exact={true} element={<Dashboard/>} />
                     <Route path="/dashboard" exact={true} element={<Dashboard/>} />
                     <Route path="/login" exact={true} element={<Login/>} />
+                    <Route path="/exchange" exact={true} element={<ExchangeRate/>} />
                 </Routes>
           </div>
     </div>
