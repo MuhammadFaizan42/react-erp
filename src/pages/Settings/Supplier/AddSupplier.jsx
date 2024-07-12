@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import { TextField, Button, Box, Typography } from '@mui/material';
 
-const AddSupplier = ({handleClose}) => {
+const AddSupplier = ({onClose}) => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -90,7 +90,7 @@ return (
             <Button variant="contained" color="primary" type="submit" fullWidth>
             Submit
             </Button>
-            <Button variant="contained" color="error" sx={{ mt: 2 }} onClick={handleClose} fullWidth>
+            <Button variant="contained" color="error" sx={{ mt: 2 }} onClick={onClose} fullWidth>
             Cancel
             </Button>
             

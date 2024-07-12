@@ -32,11 +32,15 @@ return (
                 anchorEl={anchorEl}
                 onClose={handleClose}
                 anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
+                    vertical: 'bottom',
+                    horizontal: 'left',
+                }}
+                transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
                 }}
             >
-                <Typography sx={{ p: 2 }}><AddSupplier/></Typography>
+                <Typography sx={{ p: 2 }}><AddSupplier onClose={handleClose}/></Typography>
                 </Popover>  
                     
         </div>
