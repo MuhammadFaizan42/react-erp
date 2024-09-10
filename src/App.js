@@ -9,6 +9,7 @@ import { createContext, useEffect, useState } from 'react';
 import Login from './pages/Login/index.jsx';
 import ExchangeRate from './pages/Settings/ExchangeRate.jsx';
 import Supplier from './pages/Settings/Supplier/Supplier.jsx';
+import Customer from './pages/Settings/Customer/Customer.jsx';
 
 
 const MyContext=createContext();
@@ -50,6 +51,7 @@ function App() {
                     <Route path="/login" exact={true} element={<Login/>} />
                     <Route path="/exchange" exact={true} element={<ExchangeRate/>} />
                     <Route path="/supplier" exact={true} element={<Supplier/>} />
+                    <Route path="/customer" exact={true} element={<Customer/>} />
                 </Routes>
           </div>
     </div>

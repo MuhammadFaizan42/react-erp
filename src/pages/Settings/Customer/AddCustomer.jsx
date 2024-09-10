@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Grid, TextField, FormControl, InputLabel, Select,Typography, MenuItem, Button } from '@mui/material';
 
-const AddSupplier= ({onClose}) => {
+const AddCustomer= ({onClose}) => {
   // State to manage form data
   const [formData, setFormData] = useState({
     nature: '',
@@ -89,7 +89,7 @@ const AddSupplier= ({onClose}) => {
       {/* Supplier Account Section */}
       <Box mb={4} p={2} border={1} borderColor="grey.300">
       <Typography variant="subtitle1" gutterBottom>
-            Supplier Account
+            Customer Account
       </Typography>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={4}>
@@ -146,7 +146,7 @@ const AddSupplier= ({onClose}) => {
 
       {/* Supplier Detail Section */}
       <Box p={2} border={1} borderColor="grey.300">
-        <h2>Supplier Detail</h2>
+        <h2>Customer Detail</h2>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={4}>
             <TextField name="accountTitle" label="Account Title" value={formData.accountTitle} onChange={handleChange} fullWidth variant="outlined" />
@@ -251,4 +251,4 @@ const AddSupplier= ({onClose}) => {
   );
 };
 
-export default AddSupplier;
+export default AddCustomer;

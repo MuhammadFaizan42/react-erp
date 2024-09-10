@@ -168,7 +168,7 @@ const Sidebar = () => {
                                 <li><Link to="/exchange">Exchange / Daily Rate</Link></li>
                                 <li><Link to="#">User Creation </Link></li>
                                 <li><Link to="/supplier">Supplier</Link></li>
-                                <li><Link to="#">Customer</Link></li>
+                                <li><Link to="/customer">Customer</Link></li>
                                 <li><Link to="#">Stock Location</Link></li>
                                 <li><Link to="#">Product</Link></li>
                                 <li><Link to="#">Bank</Link></li>
