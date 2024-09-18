@@ -10,6 +10,7 @@ import Login from './pages/Login/index.jsx';
 import ExchangeRate from './pages/Settings/ExchangeRate.jsx';
 import Supplier from './pages/Settings/Supplier/Supplier.jsx';
 import Customer from './pages/Settings/Customer/Customer.jsx';
+import Product from './pages/Settings/Product/Product.jsx';
 
 
 const MyContext=createContext();
@@ -52,6 +53,7 @@ function App() {
                     <Route path="/exchange" exact={true} element={<ExchangeRate/>} />
                     <Route path="/supplier" exact={true} element={<Supplier/>} />
                     <Route path="/customer" exact={true} element={<Customer/>} />
+                    <Route path="/product" exact={true} element={<Product/>} />
                 </Routes>
           </div>
     </div>

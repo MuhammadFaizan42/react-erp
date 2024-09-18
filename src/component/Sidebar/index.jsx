@@ -170,7 +170,7 @@ const Sidebar = () => {
                                 <li><Link to="/supplier">Supplier</Link></li>
                                 <li><Link to="/customer">Customer</Link></li>
                                 <li><Link to="#">Stock Location</Link></li>
-                                <li><Link to="#">Product</Link></li>
+                                <li><Link to="/product">Product</Link></li>
                                 <li><Link to="#">Bank</Link></li>
                                 <li><Link to="#">Unit Of Measurement</Link></li>
                                 <li><Link to="#">Carriage/Transportation</Link></li>
