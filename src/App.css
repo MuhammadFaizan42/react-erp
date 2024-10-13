@@ -105,3 +105,10 @@ display: block;padding: 6px 0px;font-size: 14px;font-weight: 500;transition: all
 .loginSection .loginBox .wrapper .form-group .icon{position: absolute;top: 3px;left: 10px;z-index: 100;font-size: 23px;}
 .loginSection .loginBox .wrapper .form-group .icon svg{color:#5e5d72;}
 .btn-blue{background: #0858f7 !important;font-size: 14px !important;font-weight: 600;color:#fff !important;text-transform: capitalize !important;border-radius: 8px !important;}
+
+
+
+/* Add margin to the form inside the dialog */
+.form-with-margin {
+    margin: 20px 0;
+}

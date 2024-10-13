@@ -2,8 +2,7 @@ import React from 'react'
 import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import SupplierGrid from '../../Dashboard/components/supplierGridTable';
-import AddCustomer from './AddProduct';
+import ProductGrid from '../Product/productGridTable.jsx';
 import AddProduct from './AddProduct';
 
 const Product = () => {
@@ -52,7 +51,7 @@ return (
             <h3 className='hd'>Product Detail</h3>
         <div className='row cardFilter'>
             <div className="col justify-content-center">
-                <SupplierGrid/>
+                <ProductGrid />
             </div>
         </div>
     </div>

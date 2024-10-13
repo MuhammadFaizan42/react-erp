@@ -103,15 +103,15 @@ const AddProduct= ({onClose}) => {
           </Grid>
 
           <Grid item xs={12} sm={4}>
-            <TextField name="factoryNumber" label="Factory Number" value={formData.factoryNumber} onChange={handleChange} fullWidth variant="outlined" />
+            <TextField name="location" label="Location" value={formData.location} onChange={handleChange} fullWidth variant="outlined" />
           </Grid>
 
           <Grid item xs={12} sm={4}>
-            <TextField name="ntn" label="NTN" value={formData.ntn} onChange={handleChange} fullWidth variant="outlined" />
+            <TextField name="codeName" label="Code Name" value={formData.codeName} onChange={handleChange} fullWidth variant="outlined" />
           </Grid>
 
           <Grid item xs={12} sm={4}>
-            <TextField name="contactNumber" label="Contact Number" value={formData.contactNumber} onChange={handleChange} fullWidth variant="outlined" />
+            <TextField name="reproduce" label="Reproduce Qty" value={formData.reproduce} onChange={handleChange} fullWidth variant="outlined" />
           </Grid>
 
           <Grid item xs={12} sm={4}>
@@ -119,31 +119,53 @@ const AddProduct= ({onClose}) => {
           </Grid>
 
           <Grid item xs={12} sm={4}>
-            <TextField name="officeNumber" label="Office Number" value={formData.officeNumber} onChange={handleChange} fullWidth variant="outlined" />
+            <TextField name="productAging" label="Product Aging" value={formData.productAging} onChange={handleChange} fullWidth variant="outlined" />
           </Grid>
 
           <Grid item xs={12} sm={4}>
-            <TextField name="creditLimit" label="Credit Limit" value={formData.creditLimit} onChange={handleChange} fullWidth variant="outlined" />
+            <TextField name="status" label="Status" value={formData.status} onChange={handleChange} fullWidth variant="outlined" />
           </Grid>
 
           <Grid item xs={12} sm={4}>
-            <TextField name="aging" label="Aging" value={formData.aging} onChange={handleChange} fullWidth variant="outlined" />
+            <TextField name="openingBalance" label="Opening Balance" value={formData.aging} onChange={handleChange} fullWidth variant="outlined" />
           </Grid>
 
           <Grid item xs={12} sm={4}>
-            <TextField name="address" label="Address" value={formData.address} onChange={handleChange} fullWidth variant="outlined" />
+            <TextField name="uom" label="UOM" value={formData.uom} onChange={handleChange} fullWidth variant="outlined" />
           </Grid>
 
+          <Grid item xs={12} sm={4}>
+            <TextField name="productRate" label="Product Rate" value={formData.productRate} onChange={handleChange} fullWidth variant="outlined" />
+          </Grid>
+
+          <Grid item xs={12} sm={4}>
+            <TextField name="openingPrice" label="Opening Price" value={formData.openingPrice} onChange={handleChange} fullWidth variant="outlined" />
+          </Grid>
+
+          <Grid item xs={12} sm={4}>
+            <TextField name="unitConversion" label="Unit Conversion" value={formData.unitConversion} onChange={handleChange} fullWidth variant="outlined" />
+          </Grid>
+
+          <Grid item xs={12} sm={4}>
+            <TextField name="equalTo" label="Equal To" value={formData.equalTo} onChange={handleChange} fullWidth variant="outlined" />
+          </Grid>
+
+          <Grid item xs={12} sm={4}>
+            <TextField name="equalTo" label="Equal To" value={formData.equalTo} onChange={handleChange} fullWidth variant="outlined" />
+          </Grid>
+
+          <Grid item xs={12} sm={4}>
+            <TextField name="productFormula" label="Product Formula" value={formData.productFormula} onChange={handleChange} fullWidth variant="outlined" />
+          </Grid>
+
+          <Grid item xs={12} sm={4}>
+            <TextField name="batchWeight" label="Batch Weight" value={formData.batchWeight} onChange={handleChange} fullWidth variant="outlined" />
+          </Grid>
           <Grid item xs={12} sm={4}>
             <TextField name="remarks" label="Remarks" value={formData.remarks} onChange={handleChange} fullWidth variant="outlined" />
           </Grid>
-
           <Grid item xs={12} sm={4}>
-            <TextField name="credential" label="Credential" value={formData.credential} onChange={handleChange} fullWidth variant="outlined" />
-          </Grid>
-
-          <Grid item xs={12} sm={4}>
-            <TextField name="openingBalance" label="Opening Balance" value={formData.openingBalance} onChange={handleChange} fullWidth variant="outlined" />
+            <TextField name="retailerPrice" label="Retailer Price" value={formData.retailerPrice} onChange={handleChange} fullWidth variant="outlined" />
           </Grid>
         </Grid>
       </Box>
