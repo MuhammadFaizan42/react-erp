@@ -1,95 +1,112 @@
-import React, { useState } from 'react';
-import { Dialog, DialogActions, DialogContent, DialogTitle, Button, TextField, Grid } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import {
+  Dialog, DialogContent, Box, Grid, TextField, Button, Stepper, Step, StepLabel, Typography
+} from '@mui/material';
 
+const EditDetail = ({ open, onClose, initialData, onSave }) => {
+  const [activeStep, setActiveStep] = useState(0);
+  const steps = ['Product Details', 'Pricing Information', 'Additional Info'];
 
-const EditDetail = ({ open, onClose, rowData }) => {
-  const [formData, setFormData] = useState({ ...rowData });
+  const [formData, setFormData] = useState(initialData || {});
 
-  // Handle form field changes
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+  useEffect(() => {
+    if (initialData) {
+      setFormData(initialData); // Set form data to initial data on load
+    }
+  }, [initialData]);
+
+  const handleNext = () => setActiveStep((prev) => prev + 1);
+  const handleBack = () => setActiveStep((prev) => prev - 1);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = () => {
-    // Add the logic to save the changes here
-    console.log('Updated data:', formData);
-    onClose(); // Close the dialog after submission
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onSave(formData); // Call onSave with updated data
+  };
+
+  const renderStepContent = (step) => {
+    switch (step) {
+      case 0:
+        return (
+          <Box p={2}>
+            <Typography variant="h6">Product Details</Typography>
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  name="firstName"
+                  label="First Name"
+                  value={formData.firstName || ''}
+                  onChange={handleChange}
+                  fullWidth
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  name="lastName"
+                  label="Last Name"
+                  value={formData.lastName || ''}
+                  onChange={handleChange}
+                  fullWidth
+                />
+              </Grid>
+              {/* Add more fields as needed */}
+            </Grid>
+          </Box>
+        );
+      case 1:
+        return (
+          <Box p={2}>
+            <Typography variant="h6">Pricing Information</Typography>
+            <Grid container spacing={2}>
+              {/* Add fields for Pricing Information */}
+            </Grid>
+          </Box>
+        );
+      case 2:
+        return (
+          <Box p={2}>
+            <Typography variant="h6">Additional Info</Typography>
+            <Grid container spacing={2}>
+              {/* Add additional info fields if needed */}
+            </Grid>
+          </Box>
+        );
+      default:
+        return null;
+    }
   };
 
   return (
-    <Dialog open={open} onClose={onClose} fullWidth maxWidth="xl" >
-      <DialogTitle sx={{ padding: '8px', fontSize: '18px' }}>Edit Details</DialogTitle>
-      <DialogContent >
-        <form noValidate autoComplete="off" className="form-with-margin">
-          <Grid container spacing={2}>
-            {/* First row with 4 fields */}
-            <Grid item xs={3}>
-              <TextField
-                label="First Name"
-                name="firstName"
-                fullWidth
-                value={formData.firstName}
-                onChange={handleChange}
-                variant="outlined"
-              />
-            </Grid>
-            <Grid item xs={3}>
-              <TextField
-                label="Last Name"
-                name="lastName"
-                fullWidth
-                value={formData.lastName}
-                onChange={handleChange}
-                variant="outlined"
-              />
-            </Grid>
-            <Grid item xs={3}>
-              <TextField
-                label="Age"
-                name="age"
-                fullWidth
-                value={formData.age || ''}
-                onChange={handleChange}
-                variant="outlined"
-              />
-            </Grid>
-            <Grid item xs={3}>
-              <TextField
-                label="Country"
-                name="Country"
-                fullWidth
-                value={formData.Country}
-                onChange={handleChange}
-                variant="outlined"
-              />
-            </Grid>
+    <Dialog open={open} onClose={onClose} fullWidth maxWidth="md">
+      <DialogContent>
+        <Stepper activeStep={activeStep} alternativeLabel>
+          {steps.map((label) => (
+            <Step key={label}>
+              <StepLabel>{label}</StepLabel>
+            </Step>
+          ))}
+        </Stepper>
 
-            {/* Second row with 4 fields */}
-            <Grid item xs={3}>
-              <TextField
-                label="Gender"
-                name="Gender"
-                fullWidth
-                value={formData.Gender}
-                onChange={handleChange}
-                variant="outlined"
-              />
-            </Grid>
-            {/* You can add more fields here if required */}
-          </Grid>
+        <form onSubmit={handleSubmit}>
+          {renderStepContent(activeStep)}
+          <Box mt={2} display="flex" justifyContent="space-between">
+            <Button disabled={activeStep === 0} onClick={handleBack}>Back</Button>
+            {activeStep === steps.length - 1 ? (
+              <Button type="submit" variant="contained" color="primary">Save</Button>
+            ) : (
+              <Button variant="contained" color="primary" onClick={handleNext}>Next</Button>
+            )}
+          </Box>
         </form>
+
+        <Box mt={2}>
+        <Button variant="outlined" color="secondary" onClick={onClose}>Cancel</Button>
+      </Box>
       </DialogContent>
-      <DialogActions>
-        <Button onClick={onClose} color="secondary">
-          Cancel
-        </Button>
-        <Button onClick={handleSubmit} color="primary">
-          Save
-        </Button>
-      </DialogActions>
     </Dialog>
   );
 };
