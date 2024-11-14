@@ -1,38 +1,25 @@
 // app.js
+const express =  require("express");
+const app = express();
+const connectDB=require("./db/connect"); 
 
-const oracledb = require("oracledb");
-const dbConfig = require("./dbconfig");
+const IP_ADDRESS = '192.168.10.16';
+const PORT =process.env.PORT || 5000;
 
-async function run() {
-let connection;
+const products_routes = require ("./routes/product")
 
-try {
-    // Establish connection
-connection = await oracledb.getConnection({
-    user: dbConfig.user,
-    password: dbConfig.password,
-    connectString: dbConfig.connectString,
-    });
+app.get("/",(req,res)=>{
+    res.send("Hi I m live ");
+});
 
-    console.log("Connection to Oracle Autonomous Database successful!");
-
-    // Execute a sample query
-    const result = await connection.execute(`INSERT INTO STUDENTS (STUDENTID, LASTNAME, FIRSTNAME, ADDRESS, CITY)
-VALUES 
-    (5, 'Faizan', 'Muhammad', '456 Oak Ave', 'PAK')`);
-    await connection.commit();
-    console.log(result);
-} catch (err) {
-    console.error("Error connecting to Oracle DB", err);
-} finally {
-    if (connection) {
-    try {
-        await connection.close();
-    } catch (err) {
-        console.error("Error closing connection", err);
-    }
+app.use("/api/products",products_routes);
+const start =async()=>{
+    try{
+        app.listen(PORT, IP_ADDRESS, () => {
+            console.log(`Server is running at http://${IP_ADDRESS}:${PORT}`);
+        });
+    }catch(error){
+        console.log(error);
     }
 }
-}
-
-run();
+    start();
