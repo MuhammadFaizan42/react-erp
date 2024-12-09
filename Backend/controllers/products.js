@@ -16,7 +16,7 @@ try {
     }
 
     // Execute the query
-    const result = await connection.execute(`SELECT * FROM STUDENTS`, [], {
+    const result = await connection.execute(`SELECT * FROM GROUP_SUPPLIER`, [], {
     outFormat: oracledb.OUT_FORMAT_OBJECT,
     });
 
