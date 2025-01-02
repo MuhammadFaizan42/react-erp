@@ -88,6 +88,7 @@ return res.status(500).json({ error: "Failed to connect to the database." });
 }
 };
 
+// add Supplier 
 const addSupplier = async (req, res) => {
     const {
     SHORT_CODE,
@@ -264,5 +265,66 @@ const supplierPattern = `${LEVEL5_CODE}%`;  // Concatenate with '%'
     }
 };
 
+//View Supplier 
+const viewAllSuppliers = async (req, res) => {
+    let connection;
 
-module.exports = {levelFour,levelFive,addSupplier};
+    try {
+        // Establish database connection
+        connection = await connectDB();
+        if (!connection) {
+            return res.status(500).json({ error: "Failed to connect to the database." });
+        }
+
+        // Query to fetch all supplier details
+        const suppliersQuery = `
+            SELECT 
+                SUPPLIER_ID, SHORT_CODE, NATURE, NATURE_DESP, SUPPLIER_NAME, CONT_PERSON,
+                CATEGORY, CITY, MAIL_ID, ACT_STATUS, CR_LIMIT, OPENING_DATE
+            FROM 
+                GROUP_SUPPLIER
+            WHERE 
+                CO_ID = '1'
+        `;
+
+        const suppliersResult = await connection.execute(suppliersQuery);
+
+        if (suppliersResult.rows.length === 0) {
+            return res.status(404).json({ message: "No suppliers found." });
+        }
+
+        // Map the result to a readable format
+        const allSuppliers = suppliersResult.rows.map((row) => ({
+            SUPPLIER_ID: row[0],
+            SHORT_CODE: row[1],
+            NATURE: row[2],
+            NATURE_DESP: row[3],
+            SUPPLIER_NAME: row[4],
+            CONT_PERSON: row[5],
+            CATEGORY: row[6],
+            CITY: row[7],
+            MAIL_ID: row[8],
+            ACT_STATUS: row[9],
+            CR_LIMIT: row[10],
+            OPENING_DATE: row[11],
+        }));
+
+        // Send response with all suppliers' details
+        res.status(200).json({ suppliers: allSuppliers });
+    } catch (err) {
+        console.error("Error in viewAllSuppliers API:", err);
+        res.status(500).json({ error: "Failed to fetch suppliers", details: err.message });
+    } finally {
+        // Close connection
+        if (connection) {
+            try {
+                await connection.close();
+            } catch (err) {
+                console.error("Error closing connection:", err);
+            }
+        }
+    }
+};
+
+
+module.exports = {levelFour,levelFive,addSupplier,viewAllSuppliers};
